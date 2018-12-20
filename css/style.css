@@ -1,0 +1,251 @@
+body {
+    font-family: 'AraJozoor-Regular';
+}
+
+* {
+    padding: 0 ;
+    margin: 0 ;
+    box-sizing: border-box ;
+}
+.clr{
+    clear: both ;
+}
+
+@font-face {
+	font-family: 'AraJozoor-Regular';
+	src: url('font/AraJozoor-Regular.eot');
+	src: local('☺'), url('font/AraJozoor-Regular.woff') format('woff'), url('font/AraJozoor-Regular.ttf') format('truetype'), url('font/AraJozoor-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.carousel{
+    position: fixed
+}
+
+.navbar-light .navbar-nav .nav-link{
+    font-size: 0.9rem ;
+    color: white ;
+}
+.navbar-brand {
+    color: #74af96 !important;
+  
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+        color: rgba(215,75,75,1);
+}
+
+navbar-nav .nav-link {
+    transition: 2s
+}
+
+.bg-black {
+    background-color:rgba (0,0,0,0.1) ;
+}
+
+.navbar-brand img {
+    width: 80 ;
+    margin-left: 50px
+}
+
+.slider {
+    background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5), 
+      rgba(0, 0, 0, 0.78)),
+     url(../img/radio-edited.gif);
+    background-size:100% 120% ;
+    height:100vh ;
+    display: flex ;
+    align-items: center ;
+}
+
+.slider .caption {
+    color: white ;
+    background-color: rgba(0,0,0,0.3) ;
+    border: 1px solid #74af96 ;
+    border-radius: 10px ;
+    text-align: center ;
+    width: 50% ;
+    margin: auto ;
+}
+
+
+.caption .head{
+    animation-name: head ;
+    animation-duration: 3s ;
+    animation-direction: alternate ;
+    animation-iteration-count: infinite ;
+    animation-timing-function: ease-in
+}
+
+
+.caption .head h1 {
+    font-size: 3.5rem ;
+    font-weight: 700 ;
+    text-transform: capitalize ;
+    color: rgba(215,75,75,1) ;
+}
+
+.caption .head h1 span:after{
+    content: "" ;
+    font-size: 3.6rem ;
+    font-weight: 700 ;
+    text-transform: capitalize ;
+    color: #74af96 ;
+    padding-bottom: 15px ;
+    animation-name: radio;
+    animation-delay: 0.5s ;
+    animation-duration: 2.5s ;
+    animation-iteration-count: infinite ;
+}
+.slider .caption p{
+    font-size: 1rem ;
+    text-transform: capitalize ;
+    color: #74af96 ;
+    line-height: 2rem
+}
+
+#about .about-head {
+    
+    font-size: 1rem ;
+    text-transform: capitalize ;
+    color: #74af96 ;
+    line-height: 6rem ;
+    
+    
+    
+}
+
+#about .about-head h1 {
+    
+    font-size: rem ;
+    text-transform: capitalize ;
+    color:rgba(215,75,75,1) ;
+    line-height: 5rem ;
+}
+
+#about .about-head h4 {
+    
+    font-size: 1.3rem ;
+    text-transform: capitalize ;
+    color: black;
+    line-height: 2rem ;
+    color: #888
+    
+    
+}
+.btn-success {
+    
+    background-color: #74af96 ;
+}
+
+#team {
+    background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.4), 
+      rgba(0, 0, 0, 0.4)) ;
+    background-color: #74af96 ;
+     padding: 50 0;
+}
+
+#team .team-head h1 {
+    
+    font-size: 3rem ;
+    text-transform: capitalize ;
+    color:rgba(215,75,75,1) ;
+    line-height: 5rem ;
+    font-weight: 800
+}
+
+.member img {
+    text-align: center ;
+    border-bottom-right-radius: 50% ;
+    border-top-left-radius: 50% ;
+    animation-name: member-border;
+    animation-duration: 3s ;
+    animation-iteration-count: infinite ;
+    animation-direction: alternate ;
+}
+
+.member .member-img {
+    overflow: hidden ;
+    position: relative ;
+    margin-bottom: 30px
+}
+
+.member .member-img .overlay {
+    background-color: rgba(77, 125, 94, 0.6) ;
+    position: absolute ;
+    top: 0 ;
+    right: 12.5% ;
+    width: 75% ;
+    height: 100% ;
+    border-bottom-right-radius: 50% ;
+    border-top-left-radius: 50% ;
+    animation-name: overlay-border;
+    animation-duration: 3s ;
+    animation-iteration-count: infinite ;
+    animation-direction: alternate ;
+    padding-bottom: 20px ;
+    opacity: 0 ;
+       
+    
+}
+
+.member .member-img:hover .overlay {
+    opacity: 1 ;
+}
+
+@keyframes header 
+{
+    0% {transform: scale(0.9)}
+    100% {transform: scale(1)} 
+}
+
+@keyframes member-border 
+{
+    0% {transform: scale(0.9) ; border-bottom-right-radius: 10% ;
+    border-top-left-radius: 10% ;}
+    100% {transform: scale(1.0) ; border-bottom-right-radius: 50% ;
+    border-top-left-radius: 50% ;}
+}
+
+@keyframes overlay-border 
+{
+    0% {transform: scale(0.9) ; border-bottom-right-radius: 10% ;
+    border-top-left-radius: 10% ;}
+    100% {transform: scale(1.0) ; border-bottom-right-radius: 50% ;
+    border-top-left-radius: 50% ;}
+}
+
+
+@keyframes radio
+
+{
+    0%  {content: " "}
+    20%  {content: "ر "}
+    40% {content: " را "}
+    60% {content: " راد "}
+    80% {content: "  رادي "}
+    100% {content: "راديو "}
+}
+
+
+@media (max-width:725px)
+{
+    
+    .slider .caption {
+    color: white ;
+    background-color: rgba(0,0,0,0.3) ;
+    border: 1px solid #74af96 ;
+    border-radius: 10px ;
+    position: absolute;
+    top:30% ;
+    right: 25% ;
+    text-align: center ;
+    width: 50% ;
+    margin: auto ;
+}
+}
